@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-               sh 'python3 test.py'
+               sh 'docker build -t jackapp .'
             }
         }
         stage('Test') {
